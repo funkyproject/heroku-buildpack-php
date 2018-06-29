@@ -2,6 +2,8 @@
 
 BUILD_DIR=${1:-}
 if htdocs/vendor/bin/phpunit --version > /dev/null 2>&1; then
-echo "$BUILD_DIR"
-  cd "$BUILD_DIR" && htdocs/vendor/bin/phpunit
+    echo "$BUILD_DIR"
+    cd "$BUILD_DIR" && htdocs/vendor/bin/phpunit
+else
+    echo "No phpunit found"
 fi
