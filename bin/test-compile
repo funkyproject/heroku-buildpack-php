@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 BUILD_DIR=${1:-}
+
+cd htdocs
+composer install
+
 if htdocs/vendor/bin/phpunit --version > /dev/null 2>&1; then
     echo "$BUILD_DIR"
     cd "$BUILD_DIR" && htdocs/vendor/bin/phpunit
