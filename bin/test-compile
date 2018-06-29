@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 BUILD_DIR=${1:-}
-if vendor/bin/phpunit --version > /dev/null 2>&1; then
-  cd "$BUILD_DIR" && vendor/bin/phpunit
+if htdocs/vendor/bin/phpunit --version > /dev/null 2>&1; then
+echo "$BUILD_DIR"
+  cd "$BUILD_DIR" && htdocs/vendor/bin/phpunit
 fi
